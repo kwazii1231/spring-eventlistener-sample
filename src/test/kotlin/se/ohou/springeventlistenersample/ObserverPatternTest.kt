@@ -29,5 +29,11 @@ class ObserverPatternTest {
         subject.notifyToAll(Weather(WeatherCode.FINE))
         subject.notifyToAll(Weather(WeatherCode.ETC))
         subject.notifyToAll(Weather(WeatherCode.WINDY))
+
+        val url = "https://bucketplace-v2-development.s3.amazonaws.com/uploads/productions/1418699310224_9P6gfFs.jpg"
+        val splited = url.split("/")
+        println(splited)
+
+        println(splited.slice(4 until splited.size))
     }
 }

@@ -13,13 +13,18 @@ java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
 	mavenCentral()
+	maven {
+		url = uri("https://nexus.dailyhou.se/repository/maven-snapshots/")
+	}
 }
 
 dependencies {
+	implementation("io.reactivex.rxjava3:rxjava:3.0.0-RC9")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	implementation("se.ohou.aggregator:auto-aggregation:0.0.1-20211007.073510-4")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
